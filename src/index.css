@@ -4,4 +4,6 @@
 
 body {
     font-family: 'JetBrains Mono', sans-serif;
+    scroll-behavior: smooth;
 }
+
