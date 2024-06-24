@@ -1,7 +1,7 @@
 import React from "react";
 import { Button, IconButton, Chip } from "@material-tailwind/react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faLinkedin, faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faLinkedin, faGithub, faTwitter, faPagelines } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { Timeline, TimelineItem, TimelineConnector, TimelineHeader, TimelineIcon,
   TimelineBody } from "@material-tailwind/react";
@@ -14,8 +14,6 @@ function App() {
                 <div className="flex h-24 rounded-lg w-3/5 items-center justify-center gap-7 shadow-lg z-100">
                     <a href="#about">
                         <Button 
-                            color="black"
-                            loading={false}
                             variant="outlined"
                         >
                             01. ABOUT ME
@@ -23,8 +21,6 @@ function App() {
                     </a>
                     <a href="#experience">
                         <Button 
-                            color="black"
-                            loading={false}
                             variant="outlined"
 
                         >
@@ -33,8 +29,6 @@ function App() {
                     </a>
                     <a href="#projects">
                         <Button 
-                            color="black"
-                            loading={false}
                             variant="outlined"
                         >
                             03. PROJECTS 
@@ -42,21 +36,16 @@ function App() {
                     </a>
                     <a href="#contact">
                         <Button 
-                            color="black"
-                            loading={false}
                             variant="outlined"
                         >
                             04. CONTACT
                         </Button>                
                     </a>
-                    <a href="#">
-                        <Button 
-                            color="black"
-                            loading={false}
-                            variant="gradient"
-                        >
-                            RESUME
-                        </Button>                
+                    <a href="https://drive.google.com/file/d/1F6betrdsDBc--2x6sQBSNQn3T4BPKhKH/view?usp=sharing" target="_blank">
+                        <Button className="flex items-center gap-3">
+                            <FontAwesomeIcon icon={faPagelines} className="text-xl"/>
+                            Checkout Resume
+                        </Button>
                     </a>
                 </div>
             </div>
@@ -65,7 +54,7 @@ function App() {
             <div className="flex fixed">
                 {/* Links */}
                 <div className="flex fixed flex-col gap-5 h-[70vh] justify-center ml-10" id="socials">
-                    <a id="github" href="https://github.com/IAmRiteshKoushik">
+                    <a id="github" href="https://github.com/IAmRiteshKoushik" target="_blank">
                         <IconButton 
                             className="rounded hover:shadow-lg"
                             variant="outlined"
@@ -74,7 +63,7 @@ function App() {
                             <FontAwesomeIcon icon={faGithub} className="text-2xl"/>
                         </IconButton>
                     </a>
-                    <a id="twitter" href="https://x.com/AmRiteshKoushik">
+                    <a id="twitter" href="https://x.com/AmRiteshKoushik" target="_blank">
                         <IconButton 
                             className="rounded hover:shadow-lg"
                             variant="outlined"
@@ -83,7 +72,7 @@ function App() {
                             <FontAwesomeIcon icon={faTwitter} className="text-2xl"/>
                         </IconButton>
                     </a>
-                    <a id="linkedin" href="https://www.linkedin.com/in/ritesh-koushik/">
+                    <a id="linkedin" href="https://www.linkedin.com/in/ritesh-koushik/" target="_blank">
                         <IconButton 
                             className="rounded hover:shadow-lg"
                             variant="outlined"
@@ -92,7 +81,7 @@ function App() {
                             <FontAwesomeIcon icon={faLinkedin} className="text-2xl"/>
                         </IconButton>
                     </a>
-                    <a id="mail" href="mailto:riteshkoushik39@gmail.com">
+                    <a id="mail" href="mailto:riteshkoushik39@gmail.com" target="_blank">
                         <IconButton 
                             className="rounded hover:shadow-lg"
                             variant="outlined"
@@ -114,15 +103,17 @@ function App() {
                             offers in <b>Backend</b>, <b>DevOps</b> and <b>Cloud Engineering</b> roles.
                         </p>
                         <div className="mt-3 flex gap-5 mb-3">
-                            <a href="https://github.com/IAmRiteshKoushik">
-                                <Button
-                                    variant="outlined"
-                                >
-                                    GITHUB PROFILE
+                            <a href="https://github.com/IAmRiteshKoushik" target="_blank">
+                                <Button className="flex items-center gap-3" variant="outlined">
+                                    <FontAwesomeIcon icon={faGithub} className="text-xl"/>
+                                    GitHub Profile
                                 </Button>
                             </a>
-                            <a href="#">
-                                <Button>CHECKOUT RESUME</Button>
+                            <a href="https://drive.google.com/file/d/1F6betrdsDBc--2x6sQBSNQn3T4BPKhKH/view?usp=sharing" target="_blank">
+                                <Button className="flex items-center gap-3">
+                                    <FontAwesomeIcon icon={faPagelines} className="text-xl"/>
+                                    Checkout Resume
+                                </Button>
                             </a>
                         </div>
                     </div>
@@ -276,13 +267,13 @@ function App() {
                                     <Chip value="AWS" variant="gradient" className="rounded-full" />
                                 </div>
                                 <div className="flex gap-3">
-                                    <a href="https://github.com/IAmRiteshKoushik/coderev-web">
+                                    <a href="https://github.com/IAmRiteshKoushik/coderev-web" target="_blank">
                                         <Button className="mt-4 flex items-center gap-3">
                                             <FontAwesomeIcon icon={faGithub} className="text-xl"/>
                                             Web App
                                         </Button>
                                     </a>
-                                    <a href="https://github.com/IAmRiteshKoushik/coderev-bk">
+                                    <a href="https://github.com/IAmRiteshKoushik/coderev-bk" target="_blank">
                                         <Button className="mt-4 flex items-center gap-3">
                                             <FontAwesomeIcon icon={faGithub} className="text-xl"/>
                                             Server App
@@ -307,7 +298,7 @@ function App() {
                                     <Chip value="SurrealDB" variant="gradient" className="rounded-full" />
                                     <Chip value="Redis" variant="gradient" className="rounded-full" />
                                 </div>
-                                <a href="https://github.com/IAmRiteshKoushik/RocketBase">
+                                <a href="https://github.com/IAmRiteshKoushik/RocketBase" target="_blank">
                                     <Button className="mt-4 flex items-center gap-3">
                                         <FontAwesomeIcon icon={faGithub} className="text-xl"/>
                                         Server App
@@ -327,7 +318,7 @@ function App() {
                                     <Chip value="TailwindCSS" variant="gradient" className="rounded-full" />
                                     <Chip value="Material-UI" variant="gradient" className="rounded-full" />
                                 </div>
-                                <a href="https://github.com/IAmRiteshKoushik/IAmRiteshKoushik.github.io">
+                                <a href="https://github.com/IAmRiteshKoushik/IAmRiteshKoushik.github.io" target="_blank">
                                     <Button className="mt-4 flex items-center gap-3">
                                         <FontAwesomeIcon icon={faGithub} className="text-xl"/>
                                         Web App
@@ -351,7 +342,7 @@ function App() {
                                     <Chip value="SQL" variant="gradient" className="rounded-full" />
                                     <Chip value="Docker" variant="gradient" className="rounded-full" />
                                 </div>
-                                <a href="https://github.com/IAmRiteshKoushik/go-bank">
+                                <a href="https://github.com/IAmRiteshKoushik/go-bank" target="_blank">
                                     <Button className="mt-4 flex items-center gap-3">
                                         <FontAwesomeIcon icon={faGithub} className="text-xl"/>
                                         Server App
