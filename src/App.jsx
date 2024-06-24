@@ -3,20 +3,8 @@ import { Button, IconButton } from "@material-tailwind/react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faLinkedin, faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-
-import {
-    Timeline,
-    TimelineItem,
-    TimelineConnector,
-    TimelineIcon,
-    Typography,
-    TimelineHeader,
-} from "@material-tailwind/react";
-import {
-    BellIcon,
-    ArchiveBoxIcon,
-    CurrencyDollarIcon,
-} from "@heroicons/react/24/solid";
+import { Timeline, TimelineItem, TimelineConnector, TimelineHeader, TimelineIcon,
+  TimelineBody, Typography } from "@material-tailwind/react";
 
 function App() {
     return (
@@ -140,117 +128,75 @@ function App() {
                     </div>
 
                     <div className="w-3/5 h-screen flex flex-col items-left" id="about">
-                        <h1 className="text-3xl mt-40">01. About Me</h1>
+                        <h1 className="text-3xl mt-40"><b>01. About Me</b></h1>
                     </div>
 
                     <div className="w-3/5 h-screen flex flex-col items-left" id="experience">
-                        <h1 className="text-3xl mt-40">02. Where I've Worked At</h1>
-                        <div className="w-[25rem] mt-4">
+                        <h1 className="text-3xl mt-40"><b>02. Where I've Worked At</b></h1>
+                        <div className="py-10 px-20">
                             <Timeline>
-                                <TimelineItem className="h-28">
-                                    <TimelineConnector className="!w-[78px]" />
-                                    <TimelineHeader className="relative rounded-xl border border-blue-gray-50 bg-white py-3 pl-4 pr-8 shadow-lg shadow-blue-gray-900/5">
-                                        <TimelineIcon className="p-3" variant="ghost">
-                                            <BellIcon className="h-5 w-5" />
-                                        </TimelineIcon>
-                                        <div className="flex flex-col gap-1">
-                                            <Typography variant="h6" color="blue-gray">
-                                                $2400, Design changes
-                                            </Typography>
-                                            <Typography variant="small" color="gray" className="font-normal">
-                                                22 DEC 7:20 PM
-                                            </Typography>
-                                        </div>
+                                <TimelineItem>
+                                    <TimelineConnector />
+                                    <TimelineHeader className="h-3">
+                                        <TimelineIcon />
+                                        <p className="text-xl"><b>Amrita Center for Entrepreneurship | June 2024 - Present</b></p>
                                     </TimelineHeader>
+                                    <TimelineBody className="pb-8">
+                                        <p className="text-gray-700 text-sm">
+                                            Leading a 10-developer team with the tasks of creating a full-responsive portal
+                                            for Amrita Center for Entrepreneurship along with an administrative panel for 
+                                            controlling release of blogs, events, newsletters and maintaining mailing lists
+                                            to 1500+ members (students, faculties and industry experts).
+                                        </p>
+                                        <ul className="mt-1">
+                                            <li className="list-disc ml-5 text-gray-700 text-sm">
+                                                Writing clean, attractive and maintainable UI components in NextJS 
+                                                for the main portal. Enhancing the user-experience with framer-motion animations.
+                                            </li>
+                                            <li className="list-disc ml-5 text-gray-700 text-sm">
+                                                Handling frontend-to-backend integration through REST APIs and integration of PayU as 
+                                                the payment handling gateway for events.
+                                            </li>
+                                            <li className="list-disc ml-5 text-gray-700 text-sm">
+                                                Carrying out DDoS mitigation, handling authentication through JSON Web Tokens and 
+                                                load-testing the server to handle an expected traffic threshold of 5000 users.
+                                            </li>
+                                            <li className="list-disc ml-5 text-gray-700 text-sm">
+                                                Carrying out the end-to-end testing and deployment of the application using Docker, 
+                                                GitHub Actions (CI/CD), managing database-cache using Redis and maintaining connection
+                                                pools in PostgreSQL.
+                                            </li>
+                                        </ul>
+                                        <p className="mt-2"><b><u>Tech</u>: <i>NextJS, SolidJS, TypeScript, NodeJS, ExpressJS, GitHub Actions, PostgreSQL, Redis, Docker</i></b></p>
+                                    </TimelineBody>
                                 </TimelineItem>
-                                <TimelineItem className="h-28">
-                                    <TimelineConnector className="!w-[78px]" />
-                                    <TimelineHeader className="relative rounded-xl border border-blue-gray-50 bg-white py-3 pl-4 pr-8 shadow-lg shadow-blue-gray-900/5">
-                                        <TimelineIcon className="p-3" variant="ghost" color="red">
-                                            <ArchiveBoxIcon className="h-5 w-5" />
-                                        </TimelineIcon>
-                                        <div className="flex flex-col gap-1">
-                                            <Typography variant="h6" color="blue-gray">
-                                                New order #1832412
-                                            </Typography>
-                                            <Typography variant="small" color="gray" className="font-normal">
-                                                21 DEC 11 PM
-                                            </Typography>
-                                        </div>
+                                <TimelineItem>
+                                    <TimelineConnector />
+                                    <TimelineHeader className="h-3">
+                                        <TimelineIcon />
+                                        <p className="text-xl"><b>Anokha 24': Amrita's National-Level Techfest | Feb 2024 - April 2024</b></p>
                                     </TimelineHeader>
-                                </TimelineItem>
-                                <TimelineItem className="h-28">
-                                    <TimelineHeader className="relative rounded-xl border border-blue-gray-50 bg-white py-3 pl-4 pr-8 shadow-lg shadow-blue-gray-900/5">
-                                        <TimelineIcon className="p-3" variant="ghost" color="green">
-                                            <CurrencyDollarIcon className="h-5 w-5" />
-                                        </TimelineIcon>
-                                        <div className="flex flex-col gap-1">
-                                            <Typography variant="h6" color="blue-gray">
-                                                Payment completed for order #4395133
-                                            </Typography>
-                                            <Typography variant="small" color="gray" className="font-normal">
-                                                20 DEC 2:20 AM
-                                            </Typography>
-                                        </div>
-                                    </TimelineHeader>
+                                    <TimelineBody className="pb-8">
+                                        <ul className="mt-1">
+                                            <li className="list-disc ml-5 text-gray-700 text-sm">
+                                                Writing clean, attractive and maintainable UI components in NextJS 
+                                                for the main portal. Enhancing the user-experience with GSAP scroll-trigger animations.
+                                            </li>
+                                            <li className="list-disc ml-5 text-gray-700 text-sm">
+                                                Handled safety of tokens, introduced QR based profile management for guests 
+                                                (non-university students) and optimized the UI through memoization and reduction
+                                                in the number of re-renders.
+                                            </li>
+                                        </ul>
+                                        <p className="mt-2"><b><u>Tech</u>: <i>NextJS, MaterialUI, TailwindCSS, QR-Generation</i></b></p>
+                                    </TimelineBody>
                                 </TimelineItem>
                             </Timeline>
                         </div>
                     </div>
 
                     <div className="w-3/5 h-[100vh] flex flex-col items-left" id="projects">
-                        <h1 className="text-3xl mt-40">03. My Notable Projects</h1>
-                        <div className="w-[25rem] mt-4">
-                            <Timeline>
-                                <TimelineItem className="h-28">
-                                    <TimelineConnector className="!w-[78px]" />
-                                    <TimelineHeader className="relative rounded-xl border border-blue-gray-50 bg-white py-3 pl-4 pr-8 shadow-lg shadow-blue-gray-900/5">
-                                        <TimelineIcon className="p-3" variant="ghost">
-                                            <BellIcon className="h-5 w-5" />
-                                        </TimelineIcon>
-                                        <div className="flex flex-col gap-1">
-                                            <Typography variant="h6" color="blue-gray">
-                                                $2400, Design changes
-                                            </Typography>
-                                            <Typography variant="small" color="gray" className="font-normal">
-                                                22 DEC 7:20 PM
-                                            </Typography>
-                                        </div>
-                                    </TimelineHeader>
-                                </TimelineItem>
-                                <TimelineItem className="h-28">
-                                    <TimelineConnector className="!w-[78px]" />
-                                    <TimelineHeader className="relative rounded-xl border border-blue-gray-50 bg-white py-3 pl-4 pr-8 shadow-lg shadow-blue-gray-900/5">
-                                        <TimelineIcon className="p-3" variant="ghost" color="red">
-                                            <ArchiveBoxIcon className="h-5 w-5" />
-                                        </TimelineIcon>
-                                        <div className="flex flex-col gap-1">
-                                            <Typography variant="h6" color="blue-gray">
-                                                New order #1832412
-                                            </Typography>
-                                            <Typography variant="small" color="gray" className="font-normal">
-                                                21 DEC 11 PM
-                                            </Typography>
-                                        </div>
-                                    </TimelineHeader>
-                                </TimelineItem>
-                                <TimelineItem className="h-28">
-                                    <TimelineHeader className="relative rounded-xl border border-blue-gray-50 bg-white py-3 pl-4 pr-8 shadow-lg shadow-blue-gray-900/5">
-                                        <TimelineIcon className="p-3" variant="ghost" color="green">
-                                            <CurrencyDollarIcon className="h-5 w-5" />
-                                        </TimelineIcon>
-                                        <div className="flex flex-col gap-1">
-                                            <Typography variant="h6" color="blue-gray">
-                                                Payment completed for order #4395133
-                                            </Typography>
-                                            <Typography variant="small" color="gray" className="font-normal">
-                                                20 DEC 2:20 AM
-                                            </Typography>
-                                        </div>
-                                    </TimelineHeader>
-                                </TimelineItem>
-                            </Timeline>
-                        </div>
+                        <h1 className="text-3xl mt-40"><b>03. My Notable Projects</b></h1>
                     </div>
 
                     <div className="w-3/5 h-[100vh] flex flex-col items-center my-20" id="contact">

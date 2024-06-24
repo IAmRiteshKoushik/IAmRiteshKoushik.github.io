@@ -4,6 +4,8 @@
 
 body {
     font-family: 'JetBrains Mono', sans-serif;
-    scroll-behavior: smooth;
 }
 
+a[href^="#"] {
+  scroll-behavior: smooth; /* Enable smooth scrolling */
+}
