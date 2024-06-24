@@ -1,10 +1,10 @@
 import React from "react";
-import { Button, IconButton } from "@material-tailwind/react"
+import { Button, IconButton, Chip } from "@material-tailwind/react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faLinkedin, faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { Timeline, TimelineItem, TimelineConnector, TimelineHeader, TimelineIcon,
-  TimelineBody, Typography } from "@material-tailwind/react";
+  TimelineBody } from "@material-tailwind/react";
 
 function App() {
     return (
@@ -129,8 +129,54 @@ function App() {
 
                     <div className="w-3/5 h-screen flex flex-col items-left" id="about">
                         <h1 className="text-3xl mt-40"><b>01. About Me</b></h1>
+                        <div className="grid grid-cols-3 gap-4 px-20 pt-5">
+                            <div className="col-span-2 p-4 shadow-lg rounded-lg">
+                                <p className="mb-3">
+                                    <b>Namaste World!</b> My name is Ritesh Koushik. I am a 
+                                    full-stack developer out of India. My 
+                                    interest in web development started back in 2022 
+                                    when I was tasked with redesigning the portal for 
+                                    India Space Research Organization (ISRO) as part of
+                                    university coursework. This introduced me to 
+                                    React.js, TailwindCSS and the open-source UI 
+                                    libraries created by devs all around the world.
+                                </p>
+                                <p className="my-3">
+                                    <b>Fast-forwarding</b> to present day, I am having the 
+                                    priviledge of working across skilled teams and have 
+                                    found my interest and specialization in backend 
+                                    engineering where I get to manage databases, and 
+                                    build robust and scalable server-side applications.
+                                </p>
+                                <p className="my-3">
+                                    I am also exploring the domains of <b>GenAI</b> and 
+                                    <b> Web3 - Solana</b>. Check back soon for a project!
+                                </p>
+
+                                <div className="flex gap-2 mt-2 flex-wrap">
+                                    <Chip value="Next.JS" className="rounded-full" />
+                                    <Chip value="Solid.JS" className="rounded-full" />
+                                    <Chip value="Express.JS" className="rounded-full" />
+                                    <Chip value="Ruby on Rails" className="rounded-full" />
+                                    <Chip value="Go" className="rounded-full" />
+                                    <Chip value="Python" className="rounded-full" />
+                                    <Chip value="SQL" className="rounded-full" />
+                                    <Chip value="MongoDB" className="rounded-full" />
+                                    <Chip value="CI/CD" className="rounded-full" />
+                                    <Chip value="Redis" className="rounded-full" />
+                                    <Chip value="Docker" className="rounded-full" />
+                                    <Chip value="Kubernetes" className="rounded-full" />
+                                    <Chip value="Prometheus" className="rounded-full" />
+                                    <Chip value="Grafana" className="rounded-full" />
+                                </div>
+                            </div>
+                            <div className="col-span-1">
+                                <img src="./Me.jpeg" alt="profile photo" className="rounded-full shadow-lg" />
+                            </div>
+                        </div>
                     </div>
 
+                    {/* Work Experience */}
                     <div className="w-3/5 h-screen flex flex-col items-left" id="experience">
                         <h1 className="text-3xl mt-40"><b>02. Where I've Worked At</b></h1>
                         <div className="py-10 px-20">
@@ -167,7 +213,16 @@ function App() {
                                                 pools in PostgreSQL.
                                             </li>
                                         </ul>
-                                        <p className="mt-2"><b><u>Tech</u>: <i>NextJS, SolidJS, TypeScript, NodeJS, ExpressJS, GitHub Actions, PostgreSQL, Redis, Docker</i></b></p>
+                                        <div className="flex gap-2 mt-2">
+                                            <Chip value="Next.JS" className="rounded-full" />
+                                            <Chip value="Solid.JS" className="rounded-full" />
+                                            <Chip value="Express.JS" className="rounded-full" />
+                                            <Chip value="Postgre-SQL" className="rounded-full" />
+                                            <Chip value="GitHub Actions" className="rounded-full" />
+                                            <Chip value="Redis" className="rounded-full" />
+                                            <Chip value="Docker" className="rounded-full" />
+                                            <Chip value="Payment Gateway" className="rounded-full" />
+                                        </div>
                                     </TimelineBody>
                                 </TimelineItem>
                                 <TimelineItem>
@@ -188,17 +243,125 @@ function App() {
                                                 in the number of re-renders.
                                             </li>
                                         </ul>
-                                        <p className="mt-2"><b><u>Tech</u>: <i>NextJS, MaterialUI, TailwindCSS, QR-Generation</i></b></p>
+                                        <div className="flex gap-2 mt-2">
+                                            <Chip value="Next.JS" className="rounded-full" />
+                                            <Chip value="Material-UI" className="rounded-full" />
+                                            <Chip value="TailwindCSS" className="rounded-full" />
+                                            <Chip value="QR-Generation" className="rounded-full" />
+                                        </div>
                                     </TimelineBody>
                                 </TimelineItem>
                             </Timeline>
                         </div>
                     </div>
 
+                    {/* Projects */}
                     <div className="w-3/5 h-[100vh] flex flex-col items-left" id="projects">
-                        <h1 className="text-3xl mt-40"><b>03. My Notable Projects</b></h1>
+                        <h1 className="text-3xl mt-40 mb-5"><b>03. My Notable Projects</b></h1>
+                        <div className="flex flex-wrap gap-5 justify-center">
+                            {/* Project 1*/}
+                            <div className="shadow-lg rounded-xl p-5 w-1/3">
+                                <p className="text-2xl text-wrap">CodeRev: Code-Review Automation Tool</p>
+                                <p className="text-wrap">
+                                    Review Python, Java or TypeScript code using 
+                                    CodeRev through
+                                    AWS-CodeGuru which using machine 
+                                    learning models to highlight errors, vulnerabilities
+                                    and produce fixes for the code.
+                                </p>
+                                <div className="flex gap-2 mt-2 flex-wrap">
+                                    <Chip value="Next.JS" variant="gradient" className="rounded-full" />
+                                    <Chip value="Express" variant="gradient" className="rounded-full" />
+                                    <Chip value="MongoDB" variant="gradient" className="rounded-full" />
+                                    <Chip value="AWS" variant="gradient" className="rounded-full" />
+                                </div>
+                                <div className="flex gap-3">
+                                    <a href="https://github.com/IAmRiteshKoushik/coderev-web">
+                                        <Button className="mt-4 flex items-center gap-3">
+                                            <FontAwesomeIcon icon={faGithub} className="text-xl"/>
+                                            Web App
+                                        </Button>
+                                    </a>
+                                    <a href="https://github.com/IAmRiteshKoushik/coderev-bk">
+                                        <Button className="mt-4 flex items-center gap-3">
+                                            <FontAwesomeIcon icon={faGithub} className="text-xl"/>
+                                            Server App
+                                        </Button>
+                                    </a>
+                                </div>
+                            </div>
+                            {/* Project 2*/}
+                            <div className="shadow-lg rounded-xl p-5 w-1/3">
+                                <p className="text-2xl text-wrap">RocketBase: BaaS</p>
+                                <p className="text-wrap">
+                                    Entire backend in a single executable file. 
+                                    Leveraging the performance benefits of Rust 
+                                    to create a drop-in backend with an 
+                                    administration panel build with SolidJS.
+                                    Database requirements are met using SurrealDB
+                                    and Redis.
+                                </p>
+                                <div className="flex gap-2 mt-2 flex-wrap">
+                                    <Chip value="Solid.JS" variant="gradient" className="rounded-full" />
+                                    <Chip value="Rust" variant="gradient" className="rounded-full" />
+                                    <Chip value="SurrealDB" variant="gradient" className="rounded-full" />
+                                    <Chip value="Redis" variant="gradient" className="rounded-full" />
+                                </div>
+                                <a href="https://github.com/IAmRiteshKoushik/RocketBase">
+                                    <Button className="mt-4 flex items-center gap-3">
+                                        <FontAwesomeIcon icon={faGithub} className="text-xl"/>
+                                        Server App
+                                    </Button>
+                                </a>
+                            </div>
+                            {/* Project 3*/}
+                            <div className="shadow-lg rounded-xl p-5 w-1/3">
+                                <p className="text-2xl text-wrap">Portfolio Website</p>
+                                <p className="text-wrap">
+                                    Simple portfolio website showcasing work experience,
+                                    projects and contact info. You are currently looking 
+                                    at it :)
+                                </p>
+                                <div className="flex gap-2 mt-2 flex-wrap">
+                                    <Chip value="React.JS" variant="gradient" className="rounded-full" />
+                                    <Chip value="TailwindCSS" variant="gradient" className="rounded-full" />
+                                    <Chip value="Material-UI" variant="gradient" className="rounded-full" />
+                                </div>
+                                <a href="https://github.com/IAmRiteshKoushik/IAmRiteshKoushik.github.io">
+                                    <Button className="mt-4 flex items-center gap-3">
+                                        <FontAwesomeIcon icon={faGithub} className="text-xl"/>
+                                        Web App
+                                    </Button>
+                                </a>
+                            </div>
+                            {/* Project 3*/}
+                            <div className="shadow-lg rounded-xl p-5 w-1/3">
+                                <p className="text-2xl text-wrap">BankAPI</p>
+                                <p className="text-wrap py-2">
+                                    A simple API written in Go which simulates the 
+                                    working of a bank server. It uses a PostgreSQL
+                                    database to handle transactions and can be 
+                                    deployed in any environment through 
+                                    containerization using Docker. JWT has been 
+                                    used for token-based authentication.
+                                </p>
+                                <div className="flex gap-2 mt-2 flex-wrap">
+                                    <Chip value="Go" variant="gradient" className="rounded-full" />
+                                    <Chip value="JSON" variant="gradient" className="rounded-full" />
+                                    <Chip value="SQL" variant="gradient" className="rounded-full" />
+                                    <Chip value="Docker" variant="gradient" className="rounded-full" />
+                                </div>
+                                <a href="https://github.com/IAmRiteshKoushik/go-bank">
+                                    <Button className="mt-4 flex items-center gap-3">
+                                        <FontAwesomeIcon icon={faGithub} className="text-xl"/>
+                                        Server App
+                                    </Button>
+                                </a>
+                            </div>
+                        </div>
                     </div>
 
+                    {/* Contact */}
                     <div className="w-3/5 h-[100vh] flex flex-col items-center my-20" id="contact">
                         <h1>04. What's Upcoming ?</h1>
                         <h1 className="text-6xl my-4">Get In Touch</h1>
